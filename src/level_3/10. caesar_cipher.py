@@ -10,7 +10,11 @@ word_caesar_cipher: str= ""
 n: int = int(input("Caesar Cipher value: "))
 
 for i in range(len(word)):
-    x: int = ord(word[i]) + n
-    word_caesar_cipher= word_caesar_cipher + chr(x)
+    if  97 <=ord(word[i]) + n <= 122:
+        x: int = ord(word[i]) + n
+        word_caesar_cipher= word_caesar_cipher + chr(x)
+    else:
+        x: int = ord(word[i]) + n - 26
+        word_caesar_cipher = word_caesar_cipher + chr(x)
 
 print(word_caesar_cipher)
