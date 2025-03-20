@@ -7,20 +7,10 @@ An anagram of a string is another string that contains the same characters, only
 
 str_1: str = input("Enter string_1: ")
 str_2: str = input("Enter string_2: ")
-anagram: int = 1
 
-set_1: set = set(str_1)
-set_2: set = set(str_2)
+list_1: list = list(str_1.lower())
+list_2: list = list(str_2.lower())
+list_1.sort()
+list_2.sort()
 
-if len(str_1) == len(str_2):
-    for char in set_1:
-        if char not in set_2:
-            anagram= 0
-            break
-else:
-    anagram= 0
-
-if anagram == 0:
-    print(f"'{str_1}' and '{str_2}' are not anagrams.")
-else:
-    print(f"'{str_1}' and '{str_2}' are anagrams.")
+print(f"'{str_1}' and '{str_2}' are anagrams is {list_1 == list_2}.")
