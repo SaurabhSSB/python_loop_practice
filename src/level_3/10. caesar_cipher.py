@@ -13,6 +13,9 @@ for i in range(len(word)):
     if  97 <=ord(word[i]) + n <= 122:
         x: int = ord(word[i]) + n
         word_caesar_cipher= word_caesar_cipher + chr(x)
+    elif 65 <= ord(word[i]) + n <= 90:
+        x: int = ord(word[i]) + n
+        word_caesar_cipher= word_caesar_cipher + chr(x)
     else:
         x: int = ord(word[i]) + n - 26
         word_caesar_cipher = word_caesar_cipher + chr(x)
